@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
 </head>
 <body>
     <main>
-
+        <?php var_dump($_SESSION)?>
     </main>
 </body>
 </html>
