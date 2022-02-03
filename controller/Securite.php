@@ -15,6 +15,6 @@ class Securite
 
     public static function estConnecte()
     {
-        return (!empty($_SESSION['profil']));
+        return (!empty($_SESSION['user']));
     }
 }

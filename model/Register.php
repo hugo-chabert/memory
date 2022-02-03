@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../database/Database.php');
+require_once(__DIR__ . '/../database/DB_connection.php');
 require_once(__DIR__ . '/../controller/Toolbox.php');
 require_once(__DIR__ . '/../controller/Securite.php');
 
