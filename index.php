@@ -16,8 +16,10 @@ if (isset($_SESSION['user'])) {
     <title>Memory</title>
 </head>
 <body>
+    <?php require 'view/header.php'?>
     <main>
         <?php var_dump($_SESSION)?>
     </main>
+    <?php require 'view/footer.php'?>
 </body>
 </html>
