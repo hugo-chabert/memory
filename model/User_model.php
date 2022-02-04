@@ -20,6 +20,20 @@ class User_model
         return $estModifier;
     }
 
+    public function sql_modifier_profil_sans_login($prenom_secure, $nom_secure, $id)
+    {
+        $req = "UPDATE utilisateurs set prenom = :prenom, nom = :nom WHERE id = :id";
+        $stmt = Database::connect_db()->prepare($req);
+        $stmt->execute(array(
+            ":prenom" => $prenom_secure,
+            ":nom" => $nom_secure,
+            ":id" => $id
+        ));
+        $estModifier = ($stmt->rowCount() > 0);
+        $stmt->closeCursor();
+        return $estModifier;
+    }
+
     public function sql_info_user_id($id)
     {
         //requete sql
