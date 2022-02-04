@@ -36,11 +36,18 @@ if (Securite::estConnecte()) {
     <main>
 
         <form action="" method="post">
+            
             <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
             <p>Connectez-vous</p>
-            <label>Login :<input type="text" name="login" placeholder="login" autocomplete="off"></label>
-            <label>Mot de passe :<input type="password" name="password" placeholder="Mot de passe" /></label>
+
+            <label>Login :</label>
+            <input type="text" name="login" placeholder="login" autocomplete="off">
+
+            <label>Mot de passe :</label>
+            <input type="password" name="password" placeholder="Mot de passe" />
+
             <button type="submit" name="connexion">Connexion</button>
+
             <p class="message">Vous n'avez pas de compte? <br><a class="aa" href="inscription.php">Creez un compte</a></p>
         </form>
 

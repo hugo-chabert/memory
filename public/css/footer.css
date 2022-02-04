@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+footer h2 {
+    font-family: Title;
+    margin-top: 0.9375rem;
+}
+
+footer p {
+    font-family: Texte;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--TextFooter-);
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .part-up section p {
+    color: var(--TextFooter-);
+    letter-spacing: 1px;
+}
+
+footer div div section h2 {
+    color: var(--White-);
+    letter-spacing: 2px;
+}
+
+section ul li {
+    font-size: clamp(0.625rem, 2vw, 1.375rem);
+}
+
+.container-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Background2-);
+}
+
+.part-up section:nth-child(1) {
+    width: 50%;
+    text-align: justify;
+}
+
+.part-up section:nth-child(2) {
+    width: 20%;
+}
+
+.part-up section:nth-child(3) {
+    width: 20%;
+}
+
+.part-up {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5;
+    width: 70%;
+}
+
+.part-down {
+    padding: 0.5%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100%;
+}
+
+.social button {
+    border-radius: 3.125rem;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    margin-right: 1.875rem;
+    cursor: pointer;
+    border: none;
+    font-family: "Comfortaa", cursive;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 0) 5%, rgba(255, 255, 255, 0.5) 6%, rgba(255, 255, 255, 0) 9%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0.5) 19%, rgba(255, 255, 255, 0) 21%);
+    background-size: 150%;
+    background-position: right;
+    transition: 1s;
+}
+
+.social button:hover {
+    background-position: left;
+    color: white;
+    box-shadow: inset 0px 3px 5px white, 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.social button:focus {
+    outline: none;
+}
+
+.facebook:hover {
+    background-color: var(--Color1-);
+}
+
+.twitter:hover {
+    background-color: var(--Color2-);
+}
+
+.instagram:hover {
+    background-color: var(--Color3-);
+}
+
+.github:hover {
+    background-color: var(--Color4-);
+}
+
+footer div div ul li a:hover {
+    color: var(--Hover-);
+}

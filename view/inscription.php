@@ -38,18 +38,35 @@ if (Securite::estConnecte()) {
 <body>
     <?php require('header.php'); ?>
     <main>
+        <div class="container">
+            <form action="" method="post">
+                <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
 
-        <form action="" method="post">
-            <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
-            <label>Login :<input type="text" name="login" placeholder="Login" /></label>
-            <label>Prénom :<input type="text" name="prenom" placeholder="Prenom" autocomplete="off"></label>
-            <label>Nom :<input type="text" name="nom" placeholder="Nom" autocomplete="off"></label>
-            <label>Mot de passe :<input type="password" name="password" placeholder="Mot de passe" /></label>
-            <label>Confirmez le mot de passe :<input type="password" name="Cpassword" placeholder="Confirmez le mot de passe" /></label>
-            <button type="submit" name="inscription">Creer un compte</button>
-            <p class="message">Vous avez déjà un compte ? <br><a class="aa" href="connexion.php">Connectez vous</a></p>
-        </form>
+                <fieldset>
 
+                    <legend>Saisir toutes vos informations</legend>
+
+                    <label for ="login">Login :</label>
+                    <input id="login" type="text" name="login" placeholder="Login" />
+
+                    <label for ="prenom">Prénom :</label>
+                    <input id="prenom" type="text" name="prenom" placeholder="Prenom" autocomplete="off">
+                    
+                    <label for ="nom">Nom :</label>
+                    <input id="nom" type="text" name="nom" placeholder="Nom" autocomplete="off">
+                    
+                    <label for ="password">  Mot de passe :</label>
+                    <input id="password" type="password" name="password" placeholder="Mot de passe" />
+                    
+                    <label for ="conf-password">Confirmez le mot de passe :</label>
+                    <input id="conf-password" type="password" name="Cpassword" placeholder="Confirmez le mot de passe" />
+
+                </fieldset>
+                <button type="submit" name="inscription">Creer un compte</button>
+                
+                <p class="message">Vous avez déjà un compte ? <br><a class="aa" href="connexion.php">Connectez vous</a></p>
+            </form>
+        </div>
     </main>
     <?php require('footer.php'); ?>
 </body>
