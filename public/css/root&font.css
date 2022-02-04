@@ -6,33 +6,28 @@
     --White-: #FFFFFF;
     --Black-: #000000;
     --Grey-: #757575;
-    --Background-: rgb(35, 35, 37);
-    --BackgroundBody-: rgb(45, 45, 47);
+    --Background1-: rgb(35, 35, 37);
     --Background2-: #33353d;
     --Background3-: #454750;
-    --BackgroundTable1-: #5e6064;
-    --BackgroundTable2-: #67696e;
-    --BackgroundTableHover-: #56585c;
+    --Background4-: #54565f;
     --Button-: #55565d;
-    --Hover-: rgb(56, 95, 131);
-    --Base-: rgb(26, 53, 78);
+    --HoverButton-: rgb(101, 187, 105);
+    --HoverButton2-: rgba(146, 211, 149, 0.411);
+    --Hover-: rgb(56, 131, 60);
+    --Base-: rgb(28, 78, 26);
     --TextFooter-: #96a2b2;
     --Color1-: #3b5998;
     --Color2-: #00aced;
     --Color3-: #ea4c89;
     --Color4-: #d8d7d7;
     --Red-: rgb(187, 8, 8);
-    --Sport-: #da7e15;
-    --Detente-: #d15bc1;
-    --Travail-: rgb(16, 33, 49);
-    --Evenement-: #5cc914;
 }
 
 @font-face {
     font-family: Title;
-    src: url(../font/);
+    src: url(../font/BlueScreenPersonalUseRegular-0W1M9.ttf);
 }
 @font-face {
     font-family: Texte;
-    src: url(../font/);
+    src: url(../font/IniyaDisplay-ow0Ra.otf);
 }

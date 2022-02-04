@@ -4,6 +4,7 @@ html, body, main{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-image: linear-gradient(to bottom right, var(--Background1-), var(--Background3-));
 }
 
 .container{
@@ -17,4 +18,70 @@ html, body, main{
 form{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    padding: 2.5rem;
+    font-family: Texte;
 }
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    color: var(--White-);
+    border-radius: 0.625rem;
+}
+legend{
+    font-family: Title;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+input{
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    height: 1.875rem;
+    margin-bottom: 0.3125rem;
+    color: var(--White-);
+    font-family: Texte;
+    background-color: var(--Background3-);
+    border: none;
+}
+
+label{
+    margin-top: 0.9375rem;
+    margin-bottom: 0.3125rem;
+}
+form p {
+    text-align: center;
+    color: var(--White-);
+}
+
+button {
+    width: 12.5rem;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+    margin-top: 1.25rem;
+    height: 3.125rem;
+    cursor: pointer;
+    border: none;
+    font-family: Texte;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background: #020024;
+    background: linear-gradient(45deg, rgba(2, 0, 36, 0) 5%, var(--HoverButton2-) 6%, rgba(255, 255, 255, 0) 9%, var(--HoverButton2-) 10%, rgba(255, 255, 255, 0) 17%, var(--HoverButton2-) 19%, rgba(255, 255, 255, 0) 21%);
+    background-size: 150%;
+    background-position: right;
+    transition: 1s;
+}
+
+button:hover {
+    background-position: left;
+    color: var(--HoverButton-);
+    box-shadow: inset 0px 3px 5px var(--HoverButton-), 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:focus {
+    outline: none;
+}
+
+

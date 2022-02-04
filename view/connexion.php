@@ -34,23 +34,24 @@ if (Securite::estConnecte()) {
 <body>
     <?php require('header.php'); ?>
     <main>
+        <div class="container">
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Connectez-vous juste ici</legend>
+                    <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
 
-        <form action="" method="post">
-            
-            <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
-            <p>Connectez-vous</p>
+                    <label>Login :</label>
+                    <input type="text" name="login" placeholder="login" autocomplete="off">
 
-            <label>Login :</label>
-            <input type="text" name="login" placeholder="login" autocomplete="off">
+                    <label>Mot de passe :</label>
+                    <input type="password" name="password" placeholder="Mot de passe" />
+                </fieldset>
+                    <button type="submit" name="connexion">Connexion</button>
 
-            <label>Mot de passe :</label>
-            <input type="password" name="password" placeholder="Mot de passe" />
-
-            <button type="submit" name="connexion">Connexion</button>
-
-            <p class="message">Vous n'avez pas de compte? <br><a class="aa" href="inscription.php">Creez un compte</a></p>
-        </form>
-
+                    <p class="message">Vous n'avez pas de compte? <br><a class="aa" href="inscription.php">Creez un compte</a></p>
+                
+            </form>
+        </div>
     </main>
     <?php require('footer.php'); ?>
 </body>
