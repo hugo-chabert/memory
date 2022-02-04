@@ -1,10 +1,10 @@
 <?php
-session_start();
 
 require_once(__DIR__ . '/../model/Register.php');
 require_once(__DIR__ . '/../controller/Toolbox.php');
 require_once(__DIR__ . '/../controller/Securite.php');
 
+session_start();
 
 if (isset($_POST['connexion'])) {
     if (!empty($_POST['login']) && !empty($_POST['password'])) {

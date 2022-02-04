@@ -15,8 +15,7 @@ class Register
             //requete SQL
             $resultat = Register::info_user_login($login);
             if (password_verify($password_secure, $resultat['password'])) {
-
-                $_SESSION['user']['id'] = $resultat['id_utilisateur'];
+                $_SESSION['user']['id'] = $resultat['id'];
                 $_SESSION['user']['login'] = $resultat['login'];
                 Toolbox::ajouterMessageAlerte("Connexion faite.", Toolbox::COULEUR_VERTE);
                 header("Location: ../index.php");

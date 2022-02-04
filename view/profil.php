@@ -1,8 +1,10 @@
 <?php
-session_start();
 
+include('../controller/User.php');
 require_once(__DIR__ . '/../controller/Toolbox.php');
 require_once(__DIR__ . '/../controller/Securite.php');
+
+session_start();
 
 
 //affiche les infos profil
