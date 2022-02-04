@@ -11,4 +11,50 @@
     --10-: #8000ff;
     --11-: #ff00ff;
     --12-: #ff0080;
+    --back-: #000000;
+}
+
+.cardBack{
+    background-color: var(--back-);
+}
+.card1{
+    background-color: var(--1-);
+}
+.card2{
+    background-color: var(--2-);
+}
+.card3{
+    background-color: var(--3-);
+}
+.card4{
+    background-color: var(--4-);
+}
+.card5{
+    background-color: var(--5-);
+}
+.card6{
+    background-color: var(--6-);
+}
+.card7{
+    background-color: var(--7-);
+}
+.card8{
+    background-color: var(--8-);
+}
+.card9{
+    background-color: var(--9-);
+}
+.card10{
+    background-color: var(--10-);
+}
+.card11{
+    background-color: var(--11-);
+}
+.card12{
+    background-color: var(--12-);
+}
+
+.cards{
+    width : 5rem;
+    height: 6.875rem;
 }

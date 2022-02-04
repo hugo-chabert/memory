@@ -118,8 +118,6 @@ class User
         unset($_SESSION['user']);
     }
 
-
-
     public function delete_user_as_admin($id_user)
     {
 
