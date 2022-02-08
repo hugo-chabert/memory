@@ -55,9 +55,8 @@ if (!Securite::estConnecte()) {
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="../public/css/header.css">
-    <link rel="stylesheet" href="../public/css/footer.css">
     <link rel="stylesheet" href="../public/css/profil.css">
+    <link rel="stylesheet" href="../public/css/root&font.css">
 
     <title>Profil</title>
 </head>
@@ -65,24 +64,45 @@ if (!Securite::estConnecte()) {
 <body>
     <?php require('header.php'); ?>
     <main>
-
+        <h2 >Mon profil : </h2>
         <section class="section_profil">
             <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
-            <h2 data-aos="zoom-in-down" data-aos-duration="2000" data-aos-anchor-placement="top-center">Mon profil : </h2>
-            <form action="profil.php" method="post" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-anchor-placement="center">
-                <label for="login"> Login </label>
-                <input type="text" name="login" value="<?= $objet_user_info['login'] ?>" autocomplete="off">
-                <label for="prenom"> Prenom </label>
-                <input type="text" name="prenom" value="<?= $objet_user_info['prenom'] ?>" autocomplete="off">
-                <label for="nom"> Nom </label>
-                <input type="text" name="nom" value="<?= $objet_user_info['nom'] ?>" autocomplete="off">
-                <button type="submit" name="submit">Modifier profil</button>
+            <form action="profil.php" method="post" >
+                <fieldset>
+
+                    <legend>Modifacation des informations personnelles</legend>
+
+                    <label for="login"> Login </label>
+                    <input type="text" name="login" value="<?= $objet_user_info['login'] ?>" autocomplete="off">
+
+                    <label for="prenom"> Prenom </label>
+                    <input type="text" name="prenom" value="<?= $objet_user_info['prenom'] ?>" autocomplete="off">
+
+                    <label for="nom"> Nom </label>
+                    <input type="text" name="nom" value="<?= $objet_user_info['nom'] ?>" autocomplete="off">
+
+                    <button type="submit" name="submit">Modifier profil</button>
+
+                </fieldset>
             </form>
-            <form action="profil.php" method="post" data-aos="zoom-out-up" data-aos-duration="2500" data-aos-anchor-placement="center">
-                <input type="password" name="password_ancien" value="" autocomplete="off" placeholder="Ancien mot de passe">
-                <input type="password" name="password_nouveau" value="" autocomplete="off" placeholder="Nouveau mot de passe">
-                <input type="password" name="password_confirmation" value="" autocomplete="off" placeholder="Confirmation mot de passe">
-                <button type="submit" name="submit_modification_password">Modifier password</button>
+
+            <form action="profil.php" method="post">
+                <fieldset>
+
+                    <legend>Modifacation du mot de passe</legend>
+
+                    <label for="ancien-password">Ancien Mot de passe</label>
+                    <input type="password" name="password_ancien" id="ancien-password" value="" autocomplete="off" placeholder="Ancien mot de passe">
+
+                    <label for="new-password">Nouveau mot de passe</label>
+                    <input type="password" name="password_nouveau" id="new-password" value="" autocomplete="off" placeholder="Nouveau mot de passe">
+
+                    <label for="confnew-password">Confirmation du Nouveau Mot de passe</label>
+                    <input type="password" name="password_confirmation" id="confnew-password" value="" autocomplete="off" placeholder="Confirmation mot de passe">
+
+                    <button type="submit" name="submit_modification_password">Modifier password</button>
+                
+                </fieldset>
             </form>
         </section>
 
