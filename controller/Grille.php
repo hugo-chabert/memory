@@ -70,7 +70,7 @@ class Grille{
         unset($_SESSION['resultat_temps_reussite']);
         if ($temps > 0) {
             echo "Victoire, memory réalisé en " . $temps . " secondes.";
-            $_SESSION['objet_score']->envoyer_score($_SESSION['profil']['id'], $temps, $this->taille_grille);
+            $_SESSION['objet_score']->envoyer_score($_SESSION['user']['id'], $temps, $this->taille_grille);
         }
         if ($temps == 0) {
             Toolbox::ajouterMessageAlerte("Erreur, relancer le jeu!", Toolbox::COULEUR_ROUGE);

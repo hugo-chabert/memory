@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . '/../controller/Card.php');
 require_once(__DIR__ . '/../controller/Grille.php');
+require_once(__DIR__ . '/../controller/Score.php');
 require_once(__DIR__ . '/../controller/Toolbox.php');
 require_once(__DIR__ . '/../controller/Securite.php');
 require_once(__DIR__ . '/../controller/User.php');
@@ -28,6 +29,13 @@ if (isset($_POST['submit'])) {
 
 if (isset($_SESSION['grille'])) {
     $_SESSION['grille_jeu']->victoire();
+}
+
+if (isset($_SESSION['user'])) {
+    $id_session = $_SESSION['user']['id'];
+    $login_session = $_SESSION['user']['login'];
+    $_SESSION['objet_utilisateur'] = new User($login_session, $id_session);
+    $_SESSION['objet_score'] = new Score();
 }
 
 ?>
