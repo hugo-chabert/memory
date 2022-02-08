@@ -53,52 +53,55 @@ if (isset($_SESSION['user'])) {
     <?php require('header.php'); ?>
     <main>
         <?php if(!isset($_SESSION['grille'])){?>
-        <form action="" method="post">
-            <label for="paires">Choisissez le nombre de paires:</label>
-            <select name="paires" id="paires">
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
-            <button type="submit" value="submit">Choisir</button>
-        </form>
-        <?php } ?>
-    <?php if (isset($_SESSION['grille'])) { ?>
-            <form method='POST' action=''>
-                <button type='submit' name='relancer_jeu'>
-                    Reinitialiser memory
-                </button>
+        <div class="contain-game-choice">
+            <form class ="game_choice" action="" method="post">
+                <label for="paires">Choisissez le nombre de paires:</label>
+                <select name="paires" id="paires">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <button class="action_btn_sub" type="submit" value="submit">Choisir</button>
             </form>
-        <?php
-        }
-
-    if(isset($_SESSION['grille'])) {
-        ?><div class="cartes"><?php
-        foreach ($_SESSION['grille'] as $key => $value) {
-            if ($value->card_status === 1) { ?>
-            <div class="cards cardBack">
-                <form method='post' action=''>
-                    <input type="hidden" name="position" value="<?= $key ?>" />
-                    <input type="hidden" name="card_id" value="<?= $value->card_id ?>" />
-                    <input type="hidden" name="card_status" value="<?= $value->card_status ?>" />
-                    <input type="hidden" name="card_face" value="<?= $value->card_face ?>" />
-                    <button class="cards" type='submit' name="submit">
+        </div>
+        <?php } ?>
+        <div class="contain-car-btn">
+            <?php if (isset($_SESSION['grille'])) { ?>
+                <form method='POST' action=''>
+                    <button class="action_btn_reinit" type='submit' name='relancer_jeu'>
+                        Reinitialiser memory
                     </button>
                 </form>
-            </div>
-            <?php }
-            elseif ($value->card_status === 0) { ?>
-                <div class="cards card<?= $value->card_face ?>"></div>
-            <?php }
-        }
-        ?></div><?php
+            <?php
+            }
+
+            if(isset($_SESSION['grille'])) {
+            ?><div class="cartes"><?php
+            foreach ($_SESSION['grille'] as $key => $value) {
+                if ($value->card_status === 1) { ?>
+                <div class="cards cardBack">
+                    <form method='post' action=''>
+                        <input type="hidden" name="position" value="<?= $key ?>" />
+                        <input type="hidden" name="card_id" value="<?= $value->card_id ?>" />
+                        <input type="hidden" name="card_status" value="<?= $value->card_status ?>" />
+                        <input type="hidden" name="card_face" value="<?= $value->card_face ?>" />
+                        <button class="cards2" type='submit' name="submit"></button>
+                    </form>
+                </div>
+                <?php }
+                elseif ($value->card_status === 0) { ?>
+                    <div class="cards card<?= $value->card_face ?>"></div>
+                <?php }
+            }
+            ?></div>
+        </div><?php
         if(isset($_SESSION['refresh']) && $_SESSION['refresh'] == 1) {
             $_SESSION['grille'][$_POST['position']]->position_initial_deux_cartesv2($_SESSION['verif']);
             $_SESSION['refresh'] = 0;

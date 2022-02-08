@@ -10,17 +10,26 @@
     --9-: #0000ff;
     --10-: #8000ff;
     --11-: #ff00ff;
-    --12-: #ff0080;
-    --back-: #000000;
+    --0-: #ff0080;
+    --back-: #777272;
 }
-
+html, body, main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-image: linear-gradient(to bottom right, var(--Background1-), var(--Background3-));
+}
 .cartes{
+    margin-left: 340px;
+    width: 60%;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
 }
 
-.cardBack{
-    background-color: var(--back-);
-}
 .card1{
     background-color: var(--1-);
     animation-name: flipInY;
@@ -87,8 +96,8 @@
     animation-duration: 1s;
     animation-fill-mode: both;
 }
-.card12{
-    background-color: var(--12-);
+.card0{
+    background-color: var(--0-);
     animation-name: flipInY;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -98,6 +107,15 @@
     width : 5rem;
     height: 6.875rem;
     display: flex;
+    margin: 1.5%;
+    border-radius: 0.25rem;
+}
+.cards2{
+    width : 5rem;
+    height: 6.875rem;
+    display: flex;
+    margin: 2%;
+    background-color: var(--back-);
 }
 
 .flipInY {
@@ -126,4 +144,72 @@
     100% {
         transform: perspective(400px);
     }
+}
+
+.action_btn_reinit:hover {
+    background-position: left;
+    color: var(--HoverButton-);
+    box-shadow: inset 0px 3px 5px var(--HoverButton-), 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.action_btn_reinit:focus {
+    outline: none;
+}
+
+.contain-game-choice{
+    display: flex;
+    justify-content: center;
+}
+
+.game_choice{
+    margin-top: 50px;
+    color: var(--White-);
+    font-family: Texte;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+select{
+    border: none;
+    background-color: var(--Background3-);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: Texte;
+    color: var(--White-);
+    width: 2.8125rem;
+    height: 3.125rem;
+}
+button {
+    width: 12.5rem;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+    margin-top: 1.25rem;
+    height: 3.125rem;
+    cursor: pointer;
+    border: none;
+    font-family: Texte;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background: #020024;
+    background: linear-gradient(45deg, rgba(2, 0, 36, 0) 5%, var(--HoverButton2-) 6%, rgba(255, 255, 255, 0) 9%, var(--HoverButton2-) 10%, rgba(255, 255, 255, 0) 17%, var(--HoverButton2-) 19%, rgba(255, 255, 255, 0) 21%);
+    background-size: 150%;
+    background-position: right;
+    transition: 1s;
+}
+
+button:hover {
+    background-position: left;
+    color: var(--HoverButton-);
+    box-shadow: inset 0px 3px 5px var(--HoverButton-), 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:focus {
+    outline: none;
+}
+.contain-car-btn{
+    display: flex;
+    flex-direction: column;
+}
+.action_btn_reinit{
+    margin-left: 45%;
 }
