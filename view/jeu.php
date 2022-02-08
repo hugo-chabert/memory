@@ -46,7 +46,7 @@ if (isset($_SESSION['user'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../public/css/temp.css" rel="stylesheet">
+    <link href="../public/css/jeu.css" rel="stylesheet">
     <title>Memory</title>
 </head>
 <body>

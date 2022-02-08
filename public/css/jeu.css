@@ -83,14 +83,12 @@
 }
 .card11{
     background-color: var(--11-);
-    
     animation-name: flipInY;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
 .card12{
     background-color: var(--12-);
-    
     animation-name: flipInY;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -103,7 +101,6 @@
 }
 
 .flipInY {
-    
     animation-name: flipInY;
     animation-duration: 1s;
     animation-fill-mode: both;
