@@ -28,9 +28,10 @@ if (Securite::estConnecte()) {
 
 <head>
     <meta charset="UTF-8">
-    <link href="../public/css/form.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/form.css" >
     <link rel="stylesheet" href="../public/css/header.css">
     <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/root&font.css">
 
     <title>Inscription</title>
 </head>
@@ -51,19 +52,19 @@ if (Securite::estConnecte()) {
 
                     <label for ="prenom">Prénom :</label>
                     <input id="prenom" type="text" name="prenom" placeholder="Prenom" autocomplete="off">
-                    
+
                     <label for ="nom">Nom :</label>
                     <input id="nom" type="text" name="nom" placeholder="Nom" autocomplete="off">
-                    
+
                     <label for ="password">  Mot de passe :</label>
                     <input id="password" type="password" name="password" placeholder="Mot de passe" />
-                    
+
                     <label for ="conf-password">Confirmez le mot de passe :</label>
                     <input id="conf-password" type="password" name="Cpassword" placeholder="Confirmez le mot de passe" />
 
                 </fieldset>
                 <button type="submit" name="inscription">Creer un compte</button>
-                
+
                 <p class="message">Vous avez déjà un compte ? <br><a class="aa" href="connexion.php">Connectez vous</a></p>
             </form>
         </div>

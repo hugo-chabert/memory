@@ -1,21 +1,15 @@
+@import url(root&font.css);
 body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-footer h2 {
-    font-family: Title;
-    margin-top: 0.9375rem;
-}
-
-footer p {
-    font-family: Texte;
-}
 
 footer ul {
     list-style-type: none;
     padding: 0;
+    font-family: Texte;
 }
 
 footer a {
@@ -25,14 +19,11 @@ footer a {
     transition: all 0.2s ease-in-out;
 }
 
-footer .part-up section p {
-    color: var(--TextFooter-);
-    letter-spacing: 1px;
-}
-
 footer div div section h2 {
     color: var(--White-);
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-family: Title;
+    margin-top: 0.9375rem;
 }
 
 section ul li {
@@ -44,7 +35,7 @@ section ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--Background2-);
+    background-color: var(--Background1-);
 }
 
 .part-up section:nth-child(1) {

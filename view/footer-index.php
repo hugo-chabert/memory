@@ -1,28 +1,29 @@
-<link rel="stylesheet" href="../public/css/footer.css">
-<link rel="stylesheet" href="../public/css/root&font.css">
+<link rel="stylesheet" href="public/css/footer.css">
+<link rel="stylesheet" href="public/css/root&font.css">
 <footer>
     <div class="container-footer">
         <div class="part-up">
             <section class="category">
                 <h2 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">Catégories</h2>
                 <ul>
-                    <li data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1200"> <a href="../index.php"> Accueil </a></li>
-                    <li data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"> <a href="score.php"> Table des scores </a></li>
+                    <li data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1200"> <a href="index.php"> Accueil </a></li>
+                    <li data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"> <a href="view/score.php"> Table des scores </a></li>
                 </ul>
             </section>
             <section class="link">
                 <h2 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">Liens</h2>
                 <ul>
-                    <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"> <a href="jeu.php"> Memory </a></li>
+                    <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"> <a href="view/jeu.php"> Memory </a></li>
                     <?php
                     if (!isset($_SESSION['user'])) { ?>
-                        <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"> <a href="connexion.php"> Connexion </a></li>
-                        <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1600"> <a href="inscription.php"> Inscription </a></li>
+                        <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1400"> <a href="view/connexion.php"> Connexion </a></li>
+                        <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1600"> <a href="view/inscription.php"> Inscription </a></li>
                     <?php }
-                    else {?>
-                        <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1600"> <a href="profil.php"> Profil </a></li>
+                    else{ ?>
+                        <li data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1600"> <a href="view/profil.php"> Profil </a></li>
                     <?php }
                     ?>
+                    
                 </ul>
             </section>
         </div>
