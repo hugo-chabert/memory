@@ -6,6 +6,7 @@
     --White-: #FFFFFF;
     --Black-: #000000;
     --Grey-: #757575;
+    --Background0-: rgb(26, 26, 27);
     --Background1-: rgb(35, 35, 37);
     --Background2-: #33353d;
     --Background3-: #454750;
@@ -15,6 +16,8 @@
     --HoverButton2-: rgba(146, 211, 149, 0.411);
     --Hover-: rgb(56, 131, 60);
     --Base-: rgb(28, 78, 26);
+    --HoverVar-: rgb(108, 189, 112);
+    --BaseVar-: rgb(56, 112, 55);
     --TextFooter-: #96a2b2;
     --Color1-: #3b5998;
     --Color2-: #00aced;
@@ -30,4 +33,8 @@
 @font-face {
     font-family: Texte;
     src: url(../font/IniyaDisplay-ow0Ra.otf);
+}
+@font-face {
+    font-family: Game;
+    src: url(../font/Serpentine-yw3n3.ttf);
 }
