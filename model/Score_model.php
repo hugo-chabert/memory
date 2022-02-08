@@ -40,7 +40,7 @@ class Score_model
 
     public function sql_affiche_score_top10($pair)
     {
-        $req = "SELECT DISTINCT scores.score, scores.nombre_pair, utilisateurs.login FROM scores INNER JOIN utilisateurs ON scores.id_utilisateur = utilisateurs.id_utilisateur WHERE score.nombre_pair = :pair GROUP BY score.score, score.id_utilisateur   ORDER BY score.score ASC LIMIT 0, 10;";
+        $req = "SELECT DISTINCT scores.score, scores.nombre_pair, utilisateurs.login FROM scores INNER JOIN utilisateurs ON scores.id_utilisateur = utilisateurs.id WHERE scores.nombre_pair = :pair GROUP BY scores.score, scores.id_utilisateur   ORDER BY scores.score ASC LIMIT 0, 10;";
         $stmt = Database::connect_db()->prepare($req);
         $stmt->execute(array(
             ":pair" => $pair

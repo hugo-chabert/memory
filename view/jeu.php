@@ -8,6 +8,9 @@ require_once(__DIR__ . '/../controller/User.php');
 require_once(__DIR__ . '/../database/DB_connection.php');
 session_start();
 
+if (!Securite::estConnecte()) {
+    header('Location:../index.php');
+}
 
 if (!isset($_SESSION['grille']) && isset($_POST['paires'])) {
     $paires = $_POST['paires'];
