@@ -66,7 +66,6 @@ if (!Securite::estConnecte()) {
     <main>
         <h2 >Mon profil : </h2>
         <section class="section_profil">
-            <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
             <form action="profil.php" method="post" >
                 <fieldset>
                     <legend>Modifacation des informations personnelles</legend>
@@ -78,7 +77,9 @@ if (!Securite::estConnecte()) {
                     <input type="text" name="nom" value="<?= $objet_user_info['nom'] ?>" autocomplete="off">
                     <button type="submit" name="submit">Modifier profil</button>
                 </fieldset>
+                <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
             </form>
+            
             <form action="profil.php" method="post">
                 <fieldset>
                     <legend>Modifacation du mot de passe</legend>
@@ -90,6 +91,7 @@ if (!Securite::estConnecte()) {
                     <input type="password" name="password_confirmation" id="confnew-password" value="" autocomplete="off" placeholder="Confirmation mot de passe">
                     <button type="submit" name="submit_modification_password">Modifier password</button>
                 </fieldset>
+                <?php require_once(__DIR__ . '/gestion_erreur.php'); ?>
             </form>
         </section>
 

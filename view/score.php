@@ -8,10 +8,6 @@ require_once(__DIR__ . '/../controller/User.php');
 require_once(__DIR__ . '/../controller/Score.php');
 session_start();
 
-if (!Securite::estConnecte()) {
-    header('Location:../index.php');
-}
-
 if (isset($_SESSION['profil'])) {
     $id_session = $_SESSION['profil']['id'];
 }
