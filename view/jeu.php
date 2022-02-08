@@ -26,6 +26,10 @@ if (isset($_POST['submit'])) {
     $test = $_SESSION['grille'][$_POST['position']]->verifier_couple_carte($_SESSION['grille'][$_POST['position']], $_POST['position']);
 }
 
+if (isset($_SESSION['grille'])) {
+    $_SESSION['grille_jeu']->victoire();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,22 +41,24 @@ if (isset($_POST['submit'])) {
 <body>
     <?php require('header.php'); ?>
     <main>
-    <form action="" method="post">
-        <label for="paires">Choisissez le nombre de paires:</label>
-        <select name="paires" id="paires">
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <button type="submit" value="submit">Choisir</button>
-    </form>
+        <?php if(!isset($_SESSION['grille'])){?>
+        <form action="" method="post">
+            <label for="paires">Choisissez le nombre de paires:</label>
+            <select name="paires" id="paires">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <button type="submit" value="submit">Choisir</button>
+        </form>
+        <?php } ?>
     <?php if (isset($_SESSION['grille'])) { ?>
             <form method='POST' action=''>
                 <button type='submit' name='relancer_jeu'>
@@ -86,7 +92,15 @@ if (isset($_POST['submit'])) {
             $_SESSION['refresh'] = 0;
             unset($_SESSION['verif']);
         }
-    } ?>
+    }
+    if (isset($_SESSION['victoire']) && isset($_SESSION['chrono_debut_jeu'])) {
+        ?>
+
+            <div id="victoire">
+                <p><?php $_SESSION['grille_jeu']->temps_realise_victoire() ?> </p>
+            </div>
+        <?php }
+    ?>
     </main>
     <?php require('footer.php'); ?>
 </body>
