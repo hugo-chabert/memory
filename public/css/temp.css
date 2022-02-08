@@ -14,47 +14,119 @@
     --back-: #000000;
 }
 
+.cartes{
+    display: flex;
+}
+
 .cardBack{
     background-color: var(--back-);
 }
 .card1{
     background-color: var(--1-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card2{
     background-color: var(--2-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card3{
     background-color: var(--3-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card4{
     background-color: var(--4-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card5{
     background-color: var(--5-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card6{
     background-color: var(--6-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card7{
     background-color: var(--7-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card8{
     background-color: var(--8-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card9{
     background-color: var(--9-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card10{
     background-color: var(--10-);
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card11{
     background-color: var(--11-);
+    
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 .card12{
     background-color: var(--12-);
+    
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 .cards{
     width : 5rem;
     height: 6.875rem;
+    display: flex;
+}
+
+.flipInY {
+    
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes flipInY {
+    0% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        transition-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+    100% {
+        transform: perspective(400px);
+    }
 }

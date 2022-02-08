@@ -79,26 +79,27 @@ if (isset($_SESSION['user'])) {
         <?php
         }
 
-    if (isset($_SESSION['grille'])) {
-
+    if(isset($_SESSION['grille'])) {
+        ?><div class="cartes"><?php
         foreach ($_SESSION['grille'] as $key => $value) {
-
             if ($value->card_status === 1) { ?>
+            <div class="cards cardBack">
                 <form method='post' action=''>
                     <input type="hidden" name="position" value="<?= $key ?>" />
                     <input type="hidden" name="card_id" value="<?= $value->card_id ?>" />
                     <input type="hidden" name="card_status" value="<?= $value->card_status ?>" />
                     <input type="hidden" name="card_face" value="<?= $value->card_face ?>" />
-                    <button type='submit' name="submit">
-                        <div class="cards cardBack"></div>
+                    <button class="cards" type='submit' name="submit">
                     </button>
                 </form>
+            </div>
             <?php }
             elseif ($value->card_status === 0) { ?>
                 <div class="cards card<?= $value->card_face ?>"></div>
             <?php }
         }
-        if (isset($_SESSION['refresh']) && $_SESSION['refresh'] == 1) {
+        ?></div><?php
+        if(isset($_SESSION['refresh']) && $_SESSION['refresh'] == 1) {
             $_SESSION['grille'][$_POST['position']]->position_initial_deux_cartesv2($_SESSION['verif']);
             $_SESSION['refresh'] = 0;
             unset($_SESSION['verif']);
